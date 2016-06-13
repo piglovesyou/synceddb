@@ -1,0 +1,16 @@
+extends layout
+
+block content
+  h1= title
+  - if (flash)
+    - for (let m in flash)
+      - for (let n of flash[m])
+        div(class="alert alert-#{m}")= flash[m]
+  - if (name)
+    p
+      span.label.label-default= name 
+      &nbsp
+      a.btn(href="/logout") Logout
+  - else
+    p
+      a.btn(href="/login") Login
