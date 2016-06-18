@@ -1,6 +1,6 @@
-const express = require('express');
+import express from 'express';
 const router = express.Router();
-const google = require('googleapis');
+import google from 'googleapis';
 const OAuth2 = google.auth.OAuth2;
 const oauth2 = google.oauth2('v2');
 const concentUrl = createOAuth2Client().generateAuthUrl({ scope: [ 'profile' ] });
@@ -24,13 +24,13 @@ router.get('/oauth2callback', (req, res, next) => {
     oauth2.userinfo.get({ auth: oauth2Client }, (err, profile) => {
       if (err) res.status(500).send('baaa');
       req.session.profile = profile;
-      req.flash('success', `${profile.name} is successfully logged in`);
+      req.flash('info', `${profile.name} is successfully logged in`);
       res.redirect('/');
     });
   });
 });
 
-module.exports = router;
+export default router;
 
 function createOAuth2Client() {
   return new OAuth2(

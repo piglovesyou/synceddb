@@ -1,0 +1,107 @@
+// https://material.google.com/style/color.html#color-color-palette Indigo
+// 50#E8EAF6
+//   100#C5CAE9
+//   200#9FA8DA
+// 300#7986CB
+//   400#5C6BC0
+//   500#3F51B5
+// 600#3949AB
+//   700#303F9F
+//   800#283593
+// 900#1A237E
+// 
+// Purple
+// 50#F3E5F5
+//   100#E1BEE7
+//   200#CE93D8
+// 300#BA68C8
+//   400#AB47BC
+//   500#9C27B0
+// 600#8E24AA
+//   700#7B1FA2
+//   800#6A1B9A
+// 900#4A148C
+
+body
+  margin: 0
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif
+  color: #050823
+
+html, body
+  height: 100%
+
+*
+  box-sizing: border-box
+
+
+body
+  display: flex
+
+#application-container,
+.application
+  flex: 1
+  display: flex
+  flex-direction: column
+
+
+.flexbox
+  display: flex
+
+.flex-1
+  flex: 1
+
+
+.toolbar
+  line-height: 40px
+  background-color: #1A237E
+  padding: 0 1em
+
+.toolbar,
+.toolbar a[href]
+  color: #E8EAF6
+
+.toolbar__title
+  display: inline-block
+  margin-right: 16px
+
+.toolbar__alert
+  display: inline
+  padding: 4px 8px
+
+.toolbar__alert--info
+  background-color: #7986CB
+  color: #E8EAF6
+
+.toolbar__user
+  float: right
+  margin-right: 16px
+
+.toolbar__user-img
+  width: 24px
+  border-radius: 12px
+  margin-right: 8px
+  vertical-align: middle
+
+
+.main
+  flex: 1
+  display: flex
+
+
+.side-pane
+  width: 200px
+  padding: 16px
+  background: #9FA8DA
+
+.side-pane__label
+  margin-bottom: 8px
+  color: #5C6BC0
+
+.side-pane__channel-list
+  margin-left: 16px
+
+
+.main-pane
+  flex: 1
+  padding: 16px
+
